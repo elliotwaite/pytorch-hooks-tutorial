@@ -28,3 +28,8 @@ e.retain_grad()
 h.remove()
 
 e.backward()
+print(f'a.grad {a.grad}')
+print(f'b.grad {b.grad}')
+print(f'c.grad {c.grad}')
+print(f'd.grad {d.grad}')
+print(f'e.grad {e.grad}')
