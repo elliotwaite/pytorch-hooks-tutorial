@@ -23,6 +23,12 @@ e = c * d
 
 e.retain_grad()
 e.register_hook(lambda grad: grad * 2)
-e.retain_grad()
+e.retain_grad() # second-time retain_grad() is NOP
 
 e.backward()
+
+print(f'a.grad {a.grad}')
+print(f'b.grad {b.grad}')
+print(f'c.grad {c.grad}')
+print(f'd.grad {d.grad}')
+print(f'e.grad {e.grad}')
